@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+
+
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+
+    <link rel="icon" href="images/meteo.png" />
+    <title>Météo</title> 
+    <link rel="stylesheet" type="text/css" href="styles/style.css" media="all" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head> 
+
+<header>
+    <img src="images/meteo.png" alt="texte si l'image ne s'affiche pas"/>
+    <h1>Météo <span id="titre_ville"></span></h1>
+
+    <nav>
+		<li class = "navigation"><a class = "active" href="index.html">Météo actuelle</a></li>
+        <li class = "navigation"><a href="index2.html">Historique températures</a></li>
+        
+	</nav>
+</header>
+
+<body>
+
+    <div id="sidebar" class="sidebar" onmouseover="gereSidebar()" onmouseout="gereSidebar()">
+        <a href="#choix"><img src="images/cityscape.png" alt="Ville" class="icon"><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Ville</span></a><br>
+        <a href="#infos"><img src="images/cloudy.png" alt="Météo" class="icon"><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Météo</span></a><br>
+        <a href="#section_graphe"><img src="images/chart.png" alt="Graphe" class="icon"><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Graphe</span></a><br>
+        <a href="#map"><img src="images/map.png" alt="Carte" class="icon"><span class="icon-text"></span>&nbsp;&nbsp;&nbsp;&nbsp;Carte</span></a><br>
+    </div>
+
+
+    <section id="choix">
+        <h1>Sélectionnez une Ville</h1>
+        <input type="text" id="entreeVille" placeholder="Entrez une ville..." autocomplete="off">
+        <div id="suggestions" class="suggestions"></div>
+        <p id="result"></p>
+    </section>
+
+    <section id="infos">
+        <b>Date :</b> <span id="date" class="category"></span> <br><br>
+        <b>Température :</b> <span id="temperature" class="category"></span> °C <br>
+        <b>Probabilité précipitation :</b> <span id="proba" class="category"></span> %<br>
+        <b>Précipitation :</b> <span id="precipitation" class="category"></span> mm<br>
+        <b>Vitesse vent :</b> <span id="vent" class="category"></span> km/h<br>
+        <b>Code météo :</b> <span id="code" class="category"></span><br>
+        <span id="image_code" class="category"></span><br>
+	</section>
+
+    <section id="section_graphe">
+        <h1>Prévision des températures de la semaine</h1>
+        <canvas id="graphe"></canvas>
+    </section>
+
+    <section id="map">
+    </section>
+
+    <footer>
+		Site web réalisé par Lucie BIHET
+	</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="scripts/script1.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,227 @@
+/* style des sections*/
+
+section {
+	color: black;
+	background: #99b3ff;
+	font-size: 20px;
+	font-family: Times, Times New Roman, serif;
+}
+
+section {
+	margin-left: 50px;
+    margin-right: auto;
+	margin-top: 5%;
+	padding: 2%;
+	width: 95%;
+}
+
+/*footer*/
+
+footer {
+	font-size: 20px;
+	background: #99b3ff;
+}
+
+footer {
+	margin-left: 50px;
+	margin-top: 50px;
+	padding: 2%;
+	width: 95%;
+}
+
+/* style du header*/
+
+header {
+	margin-left: 50px;
+	padding: 5px;
+	color: black;
+	
+}
+header h1 {
+	position: relative;
+	top: 0px;
+	left: 10px;
+	font: 80px Georgia
+}
+header img {
+	position: relative;
+	float: left;
+	height: 100px;
+	width: 100px;
+	top: 40px;
+}
+
+/* style du body*/
+
+body {
+	background: #e6ecff;
+	padding: 20px 50px;
+}
+
+/* taille de la map*/
+
+#map {
+	height: 400px;
+	width: 95%;
+  }
+
+/*input ville*/
+
+input {
+	width: 300px;
+	padding: 10px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.suggestions {
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	max-width: 300px;
+	background-color: #fff;
+	position: absolute;
+	z-index: 1000;
+}
+
+.suggestion-item {
+	padding: 10px;
+	cursor: pointer;
+}
+
+.suggestion-item:hover {
+	background-color: #f0f0f0;
+}
+
+/*navigation*/
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e6ecff;
+}
+
+.navigation {
+    float: left;
+}
+
+.navigation a {
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    background-color: #FFF9F9;
+}
+
+.active {
+    background-color: #FFF9F9;
+}
+
+/*pour la sidebar*/
+
+.sidebar {
+	position: fixed;
+	height: 100%;
+	width: 85px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #799AFF;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+	white-space: nowrap;
+	margin-left: 0;
+	z-index: 9999999;
+}
+
+.sidebar a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: #4C4C4C;
+	display: block;
+	transition: 0.3s;
+}
+
+.sidebar a:hover {
+	color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.sidebar .icon {
+    width: 24px; /* Adjust the size as needed */
+    height: 24px; /* Adjust the size as needed */
+    filter: invert(100%); /* Makes the icon white */
+    vertical-align: middle; /* Aligns the icon vertically in the middle */
+    margin-right: 10px; /* Adds some space between the icon and the text */
+}
+
+.sidebar .icon-text {
+    color: white; /* Makes the text white */
+    font-size: 16px; /* Adjust the font size as needed */
+    vertical-align: middle; /* Aligns the text vertically in the middle */
+}
+
+/*adaptation pas dingue mais ça marche vite fait*/
+
+
+@media screen and (max-width: 1000px) {
+	header h1 {
+        font-size: 40px;
+    }
+
+    section {
+        font-size: 150%;
+        width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+    }
+
+    .navigation {
+        font-size: 150%;
+        margin: 0%;
+    }
+
+    body {
+        padding: 20px;
+        margin: 0%;
+    }
+
+	.sidebar {
+        display: none;
+    }
+
+	input {
+		width: 100px;
+	}
+
+	#map {
+		height: 200px;
+		width: 100%;
+	}
+
+	footer {
+		font-size: 150%;
+		margin-top: 20%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+}
+
+
